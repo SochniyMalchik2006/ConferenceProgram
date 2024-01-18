@@ -9,4 +9,6 @@ void merge(conf_prog* array[], int left, int right, int(*filterParam)(conf_prog*
 int getDurationInStr(conf_prog* arr, conf_prog* arr_2);
 int getDurationInMin(conf_prog* arr, conf_prog* arr_2);
 
+conf_prog getLongestProject(conf_prog* arr[]);
+
 #endif

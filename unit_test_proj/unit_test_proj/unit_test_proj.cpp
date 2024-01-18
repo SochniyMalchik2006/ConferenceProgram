@@ -1,5 +1,7 @@
 #include "pch.h"
 #include "CppUnitTest.h"
+#include "../../ConferenceProgram/processing.h"
+#include "../../ConferenceProgram/conf_prog.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
