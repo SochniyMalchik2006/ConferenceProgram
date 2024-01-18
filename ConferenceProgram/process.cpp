@@ -24,7 +24,16 @@ int getDurationInMin(conf_prog* arr, conf_prog* arr_2) {
 }
 
 
+int getDuration(conf_prog* arr) {
+    if (arr->finish.hour > arr->start.hour) {
+        min_1 = arr->finish.min + (arr->finish.hour - arr->start.hour - 1) * 60 + 60 - arr->start.min;
+    }
+    else {
+        min_1 = arr->finish.min - arr->start.min;
+    }
+    return min_1;
 
+}
 
 
 
@@ -106,8 +115,8 @@ void heapSort(conf_prog* arr[], int m, int n)
         heapify2(arr, i, 0);
     }
 }
-conf_prog getLongestProject(conf_prog* arr[]) {
+int getLongestProject(conf_prog* arr[]) {
     heapSort(arr, 0, (sizeof(arr) / sizeof(*arr)));
-    return arr[(sizeof(arr) / sizeof(*arr)) - 1];
+    return getDuration(arr[(sizeof(arr) / sizeof(*arr)) - 1]);
 }
 
