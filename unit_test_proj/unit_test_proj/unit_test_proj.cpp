@@ -45,7 +45,7 @@ namespace unittestproject
 			Assert::AreEqual(3, getLongestProject(confes));
 			delete_subscription(confes, 1);
 		}
-		TEST_METHOD(TestMethod3) //    
+		TEST_METHOD(TestMethod4) //    
 		{
 			conf_prog* confes[3];
 			confes[0] = build_subscription(12,12,12,15);
