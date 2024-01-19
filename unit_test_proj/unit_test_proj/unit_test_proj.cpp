@@ -35,8 +35,24 @@ namespace unittestproject
 			conf_prog* confes[2];
 			confes[0] = build_subscription(12,12,12,35);
 			confes[1] = build_subscription(12,36,12,40);
-			Assert::AreEqual(23, 23);
-			delete_subscription(confes, getLongestProject(confes));
+			Assert::AreEqual(23, getLongestProject(confes));
+			delete_subscription(confes, 2);
+		}
+		TEST_METHOD(TestMethod3) //        
+		{
+			conf_prog* confes[1];
+			confes[0] = build_subscription(12,12,12,15);
+			Assert::AreEqual(3, getLongestProject(confes));
+			delete_subscription(confes, 1);
+		}
+		TEST_METHOD(TestMethod3) //    
+		{
+			conf_prog* confes[3];
+			confes[0] = build_subscription(12,12,12,15);
+			confes[0] = build_subscription(12,15,12,19);
+			confes[0] = build_subscription(12,19,12,24);
+			Assert::AreEqual(5, getLongestProject(confes));
+			delete_subscription(confes, 3);
 		}
 	};
 }
